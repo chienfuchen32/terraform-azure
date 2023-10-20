@@ -50,7 +50,7 @@ resource "azurerm_postgresql_flexible_server" "psql" {
   administrator_password = ""
   zone                   = "1"
 
-  storage_mb = 262144
+  storage_mb = 131072
 
   sku_name   = "GP_Standard_D2ds_v4"
   depends_on = [azurerm_private_dns_zone_virtual_network_link.vnet_link]
