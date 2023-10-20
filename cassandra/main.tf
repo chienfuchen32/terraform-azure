@@ -39,7 +39,7 @@ resource "azurerm_cosmosdb_cassandra_datacenter" "datacenter" {
   cassandra_cluster_id           = azurerm_cosmosdb_cassandra_cluster.cluster_cassandra.id
   delegated_management_subnet_id = azurerm_subnet.subnet_cassandra.id
   node_count                     = 9
-  disk_count                     = 4
+  disk_count                     = 2
   sku_name                       = "Standard_D8s_v5"
   availability_zones_enabled     = false
 }
