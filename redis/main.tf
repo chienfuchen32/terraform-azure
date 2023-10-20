@@ -7,7 +7,7 @@ resource "azurerm_redis_cache" "redis" {
   name                = "redis"
   location            = var.location
   resource_group_name = var.resource_group
-  capacity            = 3
+  capacity            = 1
   family              = "P"
   sku_name            = "Premium"
   enable_non_ssl_port = false
