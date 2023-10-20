@@ -8,8 +8,8 @@ resource "azurerm_redis_cache" "redis" {
   location            = var.location
   resource_group_name = var.resource_group
   capacity            = 3
-  family              = "C"
-  sku_name            = "Standard"
+  family              = "P"
+  sku_name            = "Premium"
   enable_non_ssl_port = false
   minimum_tls_version = "1.2"
   public_network_access_enabled = false
