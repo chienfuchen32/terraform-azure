@@ -106,7 +106,7 @@ resource "azurerm_role_assignment" "role_assignment_acr" {
   role_definition_name             = "AcrPull"
   scope                            = var.acr_id
   skip_service_principal_aad_check = true
-  depends_on                       = [var.vnet_depends_on] # pending for vnet has been provisioned
+  depends_on                       = [var.vnet_depends_on]
 }
 
 # for platform team admin role assignment
