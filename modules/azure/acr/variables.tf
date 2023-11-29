@@ -1,11 +1,14 @@
 variable "resource_group" {
-  type        = string
   description = "resource group"
-  default     = "terraform-azure"
+  type        = string
 }
 
 variable "location" {
-  type        = string
   description = "location"
-  default     = "Southeast Asia"
+  type        = string
+}
+
+variable "acr_name" {
+  description = ""
+  type        = string
 }

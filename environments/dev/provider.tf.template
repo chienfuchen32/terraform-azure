@@ -1,0 +1,31 @@
+terraform {
+  required_version = ">= 1.6.0, < 1.7.0"
+
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "=3.80.0"
+    }
+    tls = {
+      source  = "hashicorp/tls"
+      version = "=4.0.4"
+    }
+    local = {
+      source  = "hashicorp/local"
+      version = "=2.4.0"
+    }
+  }
+  backend "azurerm" {
+    resource_group_name  = "{{ STATE_RESOURCE_GROUP_NAME }}"
+    storage_account_name = "{{ STATE_STORAGE_ACCOUNT_NAME }}"
+    container_name       = "{{ STATE_CONTAINER_NAME }}"
+    key                  = "{{ STATE_KEY }}"
+    access_key           = "{{ STATE_ACCESS_KEY }}"
+  }
+}
+
+provider "azurerm" {
+  features {}
+  skip_provider_registration = true
+}
+
